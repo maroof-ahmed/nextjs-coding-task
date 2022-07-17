@@ -127,7 +127,7 @@ export default function Section({ children, ...props }) {
 }
 
 Section.propTypes = {
-	subheading: PropTypes.string.isRequired,
+	subheading: PropTypes.string,
 	children: PropTypes.string.isRequired,
 	imageUrl: PropTypes.string.isRequired,
 	buttonText: PropTypes.string.isRequired,
@@ -135,5 +135,5 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
-
+	subheading: ''
 };
