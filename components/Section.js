@@ -10,7 +10,7 @@ const SectionWrapper = styled.section`
 	height: 800px;
 	width: 100%;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		height: auto;
 	}
 `;
@@ -23,7 +23,7 @@ const ArticleWrapper = styled.article`
 	align-items: center;
 	flex-direction: row;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		flex-direction: column-reverse;
 		padding-bottom: 50px;
 	}
@@ -33,7 +33,7 @@ const Img = styled.img`
 	width: auto;
 	height: 800px;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		width: 100%;
 		height: auto;
 	}
@@ -49,7 +49,7 @@ const HeadingsWrapper = styled.div`
 	height: 100%;
 	max-width: 553px;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		padding: 0 25px;
 	}
 `;
@@ -62,7 +62,7 @@ const Heading = styled.h1`
 	font-weight: 400;
 	line-height: 130%;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		font-size: 40px;
 		line-height: 120%;
 		margin: 10px 0 25px 0;
@@ -78,7 +78,7 @@ const SubHeading = styled.h2`
 	margin: 0 0 50px 0;
 	max-width: 465px;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		font-size: 14px;
 		line-height: 140%;
 		margin: 0 0 40px 0;
@@ -88,13 +88,13 @@ const SubHeading = styled.h2`
 const ImgWrapper = styled.div`
 	padding: 0 30px;
 
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		padding: 0;
 	}
 `;
 
 const ButtonWrapper = styled.div`
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 1024px) {
 		width: 100%;
 		button {
 			width: 100%;
@@ -110,10 +110,10 @@ export default function Section({ children, ...props }) {
 				<ArticleWrapper>
 					<HeadingsWrapper>
 						<Heading>{children}</Heading>
-            <SubHeading>{props.subheading}</SubHeading>
-						<ButtonWrapper> 
-							<Button custom size="large">
-								Learn more about WiFi 6E
+						<SubHeading>{props.subheading}</SubHeading>
+						<ButtonWrapper>
+							<Button custom size="large" onClick={() => props.onButtonClick()}>
+								{props.buttonText}
 							</Button>
 						</ButtonWrapper>
 					</HeadingsWrapper>
@@ -130,6 +130,8 @@ Section.propTypes = {
 	subheading: PropTypes.string.isRequired,
 	children: PropTypes.string.isRequired,
 	imageUrl: PropTypes.string.isRequired,
+	buttonText: PropTypes.string.isRequired,
+	onButtonClick: PropTypes.func.isRequired,
 };
 
 Section.defaultProps = {
