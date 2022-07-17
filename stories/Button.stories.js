@@ -20,3 +20,8 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   children: "My work",
 };
+export const Custom = Template.bind({});
+Custom.args = {
+  custom: true,
+	children: 'My custom',
+};

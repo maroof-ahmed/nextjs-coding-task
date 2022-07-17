@@ -5,16 +5,6 @@ import Button from '../components/Button';
 
 // @css
 const SectionWrapper = styled.section`
-	@font-face {
-		font-family: '-OC Rey';
-		src: url('/fonts/ocrey.ttf') format('truetype');
-	}
-
-	@font-face {
-		font-family: 'Wigrum';
-		src: url('/fonts/Wigrum-Light.otf') format('opentype');
-	}
-
 	background-color: #111;
 	color: #fff;
 	height: 800px;
@@ -114,7 +104,6 @@ const ButtonWrapper = styled.div`
 
 
 export default function Section({ children, ...props }) {
-
   return (
 		<SectionWrapper>
 			<section className="" {...props}>
