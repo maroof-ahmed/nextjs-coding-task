@@ -29,3 +29,15 @@
 }
 .button--large {
 }
+
+.button--custom {
+  background: #656CFF;
+  color: $c-white;
+  border-radius: 135px;
+  font-family: 'Wigrum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  min-width: 286px;
+}

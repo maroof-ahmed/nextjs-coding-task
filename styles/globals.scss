@@ -1,3 +1,13 @@
+	@font-face {
+		font-family: '-OC Rey';
+		src: url('/public/fonts/ocrey.ttf') format('truetype');
+	}
+
+	@font-face {
+		font-family: 'Wigrum';
+		src: url('/public/fonts/Wigrum-Light.otf') format('opentype');
+	}
+
 html,
 body {
   font-size: $fs-base;

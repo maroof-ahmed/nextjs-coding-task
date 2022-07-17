@@ -7,7 +7,9 @@ export default {
   argTypes: {},
 };
 
-const Template = (args) => <Button {...args} />;
+function Template(args) {
+  return <Button {...args} />
+}
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -17,4 +19,9 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   children: "My work",
+};
+export const Custom = Template.bind({});
+Custom.args = {
+  custom: true,
+	children: 'My custom',
 };
