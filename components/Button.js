@@ -29,12 +29,14 @@ export default function Button({
 								}
 
 Button.propTypes = {
-  primary: PropTypes.bool,
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+	primary: PropTypes.bool,
+	children: PropTypes.string.isRequired,
+	onClick: PropTypes.func,
+	custom: PropTypes.bool,
 };
 
 Button.defaultProps = {
   primary: false,
   onClick: undefined,
+  custom: false
 };
