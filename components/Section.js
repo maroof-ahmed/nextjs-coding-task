@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from 'styled-components';
-import { Button } from '../components';
+import Button from '../components/Button';
 
 // @css
 const SectionWrapper = styled.section`
@@ -105,6 +105,7 @@ const ImgWrapper = styled.div`
 
 const ButtonWrapper = styled.div`
 	@media only screen and (max-width: 480px) {
+		width: 100%;
 		button {
 			width: 100%;
 		}
